@@ -1,0 +1,28 @@
+# Log files
+*.log
+logs/
+/var/log/monitoring_system.log
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+/var/tmp/
+
+# Configuration files with sensitive data
+*.conf
+/etc/monitoring_system.conf
+
+# Backup files  
+*.bak
+*.backup
+
+# System files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo

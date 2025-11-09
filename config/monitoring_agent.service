@@ -1,0 +1,23 @@
+[Unit]
+Description=Enterprise Monitoring Agent
+After=network.target
+Wants=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/enterprise_agent
+ExecStart=/opt/enterprise_agent/agent_monitor.sh
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+# Security settings
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ReadWritePaths=/var/log/monitoring
+
+[Install]
+WantedBy=multi-user.target
